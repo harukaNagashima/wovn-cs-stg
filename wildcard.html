@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ワイルドカード用語 検証ページ</title>
+  <link rel="stylesheet" href="/wovn-test/css/main.css">
+  <!-- ↓ 自分のサイトキーに差し替え -->
+  <script src="https://j.wovn.io/1" data-wovnio="key=pqC974" async></script>
+</head>
+<body>
+  <header>
+    <h1>ワイルドカード用語 検証ページ</h1>
+    <nav>
+      <a href="/wovn-test/index.html">Home</a> /
+      <a href="/wovn-test/wildcard.html">Wildcard</a> /
+      <a href="/wovn-test/replacement.html">Image/Link</a> /
+      <a href="/wovn-test/dynamic.html">Dynamic</a> /
+      <a href="/wovn-test/tags.html">Tags</a> /
+      <a href="/wovn-test/ignore.html">Ignore</a> /
+      <a href="/wovn-test/ignore.html">Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 数字タイプ -->
+    <section>
+      <h2>数字タイプ</h2>
+
+      <ul>
+        <li>注文番号：<strong>123456789</strong></li>
+        <li>注文番号：<strong>987654321</strong></li>
+        <li>合計金額：<strong>¥12,345</strong></li>
+        <li>合計金額：<strong>¥67,890</strong></li>
+        <li>在庫数：<strong>27</strong> 個</li>
+        <li>在庫数：<strong>108</strong> 個</li>
+      </ul>
+
+      <p class="note">→ 数字を「番号」タイプで登録し、複数箇所が一括置換されることを確認。</p>
+    </section>
+
+    <!-- テキストタイプ -->
+    <section>
+      <h2>テキストタイプ（可変長コード）</h2>
+
+      <p>商品ID：<strong>6039CMK</strong></p>
+      <p>商品ID：<strong>7812LUX</strong></p>
+      <p>商品ID：<strong>9901XYZ</strong></p>
+
+      <p class="note">→ コード部分をドラッグ → テキストタイプ（文字数 5–10 など）でワイルドカード登録。</p>
+    </section>
+
+        <!-- 用語集タイプ -->
+    <section>
+      <h2>用語集タイプ（曜日など）</h2>
+      <p>発送予定日：2025/01/27 <strong>（月）</strong></p>
+      <p>発送予定日：2025/01/28 <strong>（火）</strong></p>
+      <p>発送予定日：2025/01/29 <strong>（水）</strong></p>
+      <p>発送予定日：2025/01/30 <strong>（木）</strong></p>
+      <p>発送予定日：2025/01/31 <strong>（金）</strong></p>
+      <p>発送予定日：2025/02/01 <strong>（土）</strong></p>
+      <p>発送予定日：2025/02/02 <strong>（日）</strong></p>
+
+      <p class="note">→ <strong>（　）</strong> で記述されている曜日を用語集に登録して、全行まとめて置換できるか確認。</p>
+    </section>
+
+    <!-- 複合例 -->
+    <section>
+      <h2>複合例（テキスト＋数字）</h2>
+
+      <p>追跡番号：<strong>ABCD123456JP</strong></p>
+      <p>追跡番号：<strong>EFGH987654JP</strong></p>
+
+      <p class="note">→ 固定長 12 文字の場合は「等しい 12 文字」でテキストタイプを設定。</p>
+    </section>
+  </main>
+
+  <footer><small>&copy; 2025 My WebSV</small></footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>抽出無視ルールテスト</title>
+  <link rel="stylesheet" href="/wovn-test/css/main.css">
+  <script src="https://j.wovn.io/1" data-wovnio="key=pqC974" async></script>
+</head>
+<body>
+  <header>
+    <h1>抽出無視ルールテスト</h1>
+    <nav>
+      <a href="/wovn-test/index.html">Home</a> /
+      <a href="/wovn-test/wildcard.html">Wildcard</a> /
+      <a href="/wovn-test/replacement.html">Image/Link</a> /
+      <a href="/wovn-test/dynamic.html">Dynamic</a> /
+      <a href="/wovn-test/tags.html">Tags</a> /
+      <a href="/wovn-test/ignore.html">Ignore</a> /
+      <a href="/wovn-test/ignore.html">Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>これは通常通り翻訳対象になります。</p>
+
+    <p data-wovn-ignore>
+      ここは <code>data-wovn-ignore</code> が付いているため
+      翻訳対象外です。
+    </p>
+  </main>
+
+  <footer><small>&copy; 2025 My WebSV</small></footer>
+</body>
+</html>

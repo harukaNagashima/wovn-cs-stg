@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>入力内容の確認</title>
+  <link rel="stylesheet" href="/wovn-test/css/main.css">
+  <script src="https://j.wovn.io/1" data-wovnio="key=pqC974" async></script>
+  <style>
+    table { width:100%; border-collapse:collapse; }
+    th,td { border:1px solid #ccc; padding:.5rem; }
+    th { background:#f5f5f5; text-align:left; width:30%; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>入力内容の確認</h1>
+</header>
+
+<main>
+  <table id="confirm-table"></table>
+
+  <div class="form-group" style="margin-top:1.5rem;">
+    <button onclick="history.back()" class="btn">戻る</button>
+    <button onclick="alert('送信完了！');" class="btn primary">この内容で確定</button>
+  </div>
+</main>
+
+<footer><small>&copy; 2025 My WebSV</small></footer>
+
+<script>
+  // URLSearchParams で GET 値を取得→テーブル表示
+  const params = new URLSearchParams(location.search);
+  const table  = document.getElementById('confirm-table');
+
+  for (const [key, value] of params.entries()) {
+    if (!value) continue;           // 空はスキップ
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<th>${key}</th><td>${decodeURIComponent(value)}</td>`;
+    table.appendChild(tr);
+  }
+
+  if (!table.children.length) {
+    table.innerHTML = '<tr><td>入力がありません。</td></tr>';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>サポート入力タグ一覧</title>
+  <link rel="stylesheet" href="/wovn-test/css/main.css">
+  <script src="https://j.wovn.io/1" data-wovnio="key=pqC974" async></script>
+</head>
+<body>
+<header>
+  <h1>サポートしている HTML 入力タグ</h1>
+  <nav>
+      <a href="/wovn-test/index.html">Home</a> /
+      <a href="/wovn-test/wildcard.html">Wildcard</a> /
+      <a href="/wovn-test/replacement.html">Image/Link</a> /
+      <a href="/wovn-test/dynamic.html">Dynamic</a> /
+      <a href="/wovn-test/tags.html">Tags</a> /
+      <a href="/wovn-test/ignore.html">Ignore</a> /
+      <a href="/wovn-test/ignore.html">Form</a>
+    </nav>
+</header>
+
+<main>
+  <form action="confirm.html" method="get" class="form-container">
+
+    <h2>基本的な入力タイプ</h2>
+    <div class="form-group"><input name="text"     type="text"     placeholder="テキスト入力"></div>
+    <div class="form-group"><input name="password" type="password" placeholder="パスワード"></div>
+    <div class="form-group"><input name="email"    type="email"    placeholder="メールアドレス"></div>
+    <div class="form-group"><input name="tel"      type="tel"      placeholder="電話番号"></div>
+    <div class="form-group"><input name="url"      type="url"      placeholder="URL"></div>
+    <div class="form-group"><input name="search"   type="search"   placeholder="検索"></div>
+    <div class="form-group"><input name="number"   type="number"   placeholder="数値"></div>
+
+    <h2>チェックボックス・ラジオボタン</h2>
+    <div class="form-group">
+      <input type="checkbox" id="chk1" name="checkbox">
+      <label for="chk1">チェックボックス</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="radio1" name="radio" value="radio1">
+      <label for="radio1">ラジオ1</label>
+      <input type="radio" id="radio2" name="radio" value="radio2">
+      <label for="radio2">ラジオ2</label>
+    </div>
+
+    <h2>ファイル・画像入力</h2>
+    <div class="form-group"><input type="file" name="file"></div>
+    <div class="form-group"><input type="image" src="button.png" alt="画像ボタン"></div>
+
+    <h2>日時関連</h2>
+    <div class="form-group"><input name="date"           type="date"></div>
+    <div class="form-group"><input name="time"           type="time"></div>
+    <div class="form-group"><input name="datetime-local" type="datetime-local"></div>
+    <div class="form-group"><input name="month"          type="month"></div>
+    <div class="form-group"><input name="week"           type="week"></div>
+
+    <h2>カラー・範囲</h2>
+    <div class="form-group"><input name="color"  type="color"></div>
+    <div class="form-group"><input name="range"  type="range" min="0" max="100" step="10"></div>
+
+    <h2>テキストエリア</h2>
+    <div class="form-group">
+      <textarea name="textarea1" rows="5" cols="40" placeholder="複数行テキスト入力"></textarea>
+    </div>
+    <div class="form-group">
+      <textarea name="textarea2" style="width:100%;height:200px;"></textarea>
+    </div>
+
+    <!-- 決定ボタン -->
+    <div class="form-group">
+      <button type="submit" class="btn primary">決定</button>
+      <button type="reset"  class="btn">リセット</button>
+    </div>
+
+  </form>
+</main>
+
+<footer><small>&copy; 2025 My WebSV</small></footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>画像・リンク置換機能 検証ページ</title>
+  <link rel="stylesheet" href="/wovn-test/css/main.css">
+  <!-- ↓ 自分のサイトキーに差し替え -->
+  <script src="https://j.wovn.io/1" data-wovnio="key=pqC974" async></script>
+</head>
+<body>
+  <header>
+    <h1>画像・リンク置換機能 検証ページ</h1>
+    <nav>
+      <a href="/wovn-test/index.html">Home</a> /
+      <a href="/wovn-test/wildcard.html">Wildcard</a> /
+      <a href="/wovn-test/replacement.html">Image/Link</a> /
+      <a href="/wovn-test/dynamic.html">Dynamic</a> /
+      <a href="/wovn-test/tags.html">Tags</a> /
+      <a href="/wovn-test/ignore.html">Ignore</a> /
+      <a href="/wovn-test/ignore.html">Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 画像置換検証 -->
+    <section>
+      <h2>画像置換</h2>
+      <p>
+        <!-- 日本語 → english_img.png に差し替え -->
+        <img src="materials/parfait.png"
+             alt="説明用サンプル画像"
+        width="300px">
+      </p>
+      <p class="note">
+        WOVNの管理画面で<code>sweets_dounuts_box.png</code> への画像置換を設定してください。
+        英語ページへ切り替え後、正しく画像が差し替わるか確認してください。
+      </p>
+    </section>
+
+    <!-- リンク置換検証 -->
+    <section>
+      <h2>リンク置換（PDF）</h2>
+      <p>
+        <!-- 日本語 → english_pdf.pdf に差し替え -->
+        <a href="materials/japanese.pdf"
+           target="_blank" rel="noopener">
+          PDFをダウンロード
+        </a>
+      </p>
+      <p class="note">
+        WOVNの管理画面で<code>english.pdf</code> へのリンク置換を設定してください。
+        英語ページでリンク先が <code>english.pdf</code> になっているか確認してください。
+      </p>
+    </section>
+  </main>
+
+  <footer><small>&copy; 2025 My WebSV</small></footer>
+</body>
+</html>
