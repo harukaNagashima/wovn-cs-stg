@@ -59,10 +59,25 @@
     <div id="confirmModal" class="modal">
         <div class="modal-content">
             <h2>確認内容</h2>
-            <p id="modalName"></p>
-            <p id="modalEmail"></p>
-            <p id="modalPhone"></p>
-            <p id="modalMessage"></p>
+            以下を確認してください。
+            <table>
+                <tr>
+                    <td>名前：</td>
+                    <td id="modalName"></td>
+                </tr>
+                <tr>
+                    <td>メール：</td>
+                    <td id="modalEmail"></td>
+                </tr>
+                <tr>
+                    <td>電話：</td>
+                    <td id="modalPhone"></td>
+                </tr>
+                <tr>
+                    <td>メッセージ：</td>
+                    <td id="modalMessage"></td>
+                </tr>
+            </table>
             <button id="closeModal">閉じる</button>
         </div>
     </div>
@@ -76,10 +91,10 @@
             var message = document.getElementById('message').value;
 
             // モーダルに反映
-            document.getElementById('modalName').textContent = '名前: ' + name;
-            document.getElementById('modalEmail').textContent = 'メール: ' + email;
-            document.getElementById('modalPhone').textContent = '電話番号: ' + phone;
-            document.getElementById('modalMessage').textContent = 'メッセージ: ' + message;
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalEmail').textContent = email;
+            document.getElementById('modalPhone').textContent = phone;
+            document.getElementById('modalMessage').textContent = message;
 
             // モーダルを表示
             document.getElementById('confirmModal').style.display = 'flex';
